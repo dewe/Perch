@@ -10,10 +10,6 @@ p.small {
     font-size: 16px;
 }
 
-li.associations {
-    font-size: 20px;
-}
-
 a,
 a:hover,
 a:focus,
@@ -184,6 +180,18 @@ section.success {
 section.success a {
     color: #fff;
     font-weight: bold;
+}
+
+ul.associations {
+    font-size: 20px;
+    color: #18bc9c;
+}
+
+ul.associations li {
+    display: inline-block;
+    zoom: 1; 
+    margin-right: 10px; 
+    color: #233140;
 }
 
 @media(max-width:767px) {
