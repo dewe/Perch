@@ -7,15 +7,17 @@ config.associationsUrl = "https://ethersource.gavagai.se/ethersource/rest/findAs
 
 app.get('/', function (req, res) {
 
+	var userid = process.env.SF_USER;
+	var passwd = process.env.SF_PWD;
+
 	request(config.associationsUrl, function (error, response, body) {
 	  	if (!error && response.statusCode == 200) {
 	  		var data = JSON.parse(body);
   			res.json(data);
 	  	} else {
-	  		res.send({ "status": response.statusCode, "error": error })
+	  		res.json({ "status": response.statusCode, "error": error })
 	  	}
-
-	});
+	}).auth(userid, passwd, false);
 
 });
 
