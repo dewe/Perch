@@ -4,12 +4,14 @@ var express = require('express'),
     app = express();
 
 app.get('/api', function (req, res) {
-	async.parallel({
-			'trending': gavagai.getAssociationsAsync,
-			'stable': gavagai.getBackgroundAssociationsAsync
-		}, function(err, result) {
-			res.json(err || result);
-		});
+
+    async.parallel({
+        'trending': gavagai.getAssociationsAsync,
+        'stable': gavagai.getBackgroundAssociationsAsync
+    }, function (err, result) {
+        res.json(err || result);
+    });
+
 });
 
 // start server
