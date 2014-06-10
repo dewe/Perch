@@ -15,6 +15,10 @@ app.get('/api', function (req, res) {
 
 });
 
+app.get('/api/env', function(req, res) {
+	res.json(process.env);
+});
+
 // start server
 var port = process.env.PORT || 3001;
 app.listen(port);
