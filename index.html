@@ -5,8 +5,8 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="sample app, toying around with fish and words.">
+    <meta name="author" content="@johandewe">
 
     <title>Perch - A fish. Makes sense.</title>
 
@@ -131,35 +131,7 @@
     <script src="js/classie.js"></script>
     <script src="js/cbpAnimatedHeader.js"></script>
     <script src="js/freelancer.js"></script>
-
-    <script>        
-        var trendingFormatter = function (o) {
-            return '<li>' + o.association + '</li>';
-        }
-
-        var stableFormatter = function (o) {
-            return '<li>' + o.word + '</li>';
-        }
-
-        function renderAssociations(select, associations, formatter) {
-
-            if (!associations) {
-                select.html('Currently unavailable. Please try again.');
-                return;
-            };
-
-            var items = [];
-            $.each(associations, function (id, value) {
-                items.push(formatter(value));
-            });
-            select.html(items.join(''));
-        }
-
-        $.getJSON('api/', function (data) {
-            renderAssociations($('#trending'), data.trending, trendingFormatter);
-            renderAssociations($('#stable'), data.stable, stableFormatter);
-        });
-    </script>
+    <script src="js/perch.js"></script>
 
 </body>
 

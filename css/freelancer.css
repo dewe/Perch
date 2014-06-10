@@ -194,6 +194,14 @@ ul.associations li {
     color: #233140;
 }
 
+ul.associations li:after {
+    content: " \00b7";
+}
+
+ul.associations li.nobullet:after {
+    content: none;
+}
+
 @media(max-width:767px) {
     section {
         padding: 75px 0;
