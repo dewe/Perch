@@ -1,0 +1,21 @@
+{
+  "name": "Perch.API",
+  "version": "0.0.1",
+  "description": "Fun with words.",
+  "main": "app.js",
+  "private": true,
+  "dependencies": {
+    "express": "~4.4.1",
+    "request": "~2.36.0"
+  },
+  "devDependencies": {
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+    "engines": {
+    "node": "~0.10.28",
+    "npm": "~1.4.9"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "trending": [
+    {
+      "association": "hello",
+      "strength": 0.8
+    },
+    {
+      "association": "hello-world1",
+      "forWord": "hello",
+      "strength": 0.4
+    },
+    {
+      "association": "hello-world2",
+      "forWord": "hello-world1",
+      "strength": 0.5
+    }
+  ]
+}
