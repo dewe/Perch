@@ -1,6 +1,5 @@
 var express = require('express'),
     async = require('async'),
-	config = require('./config.js'),
 	gavagai = require('./gavagai.js'),
     app = express();
 
